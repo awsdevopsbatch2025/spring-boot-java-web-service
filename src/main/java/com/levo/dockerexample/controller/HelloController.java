@@ -14,5 +14,4 @@ public class HelloController {
 	public String test() {
 		return "docker-java-app is up and running: " + new Date();
 	}
-
 }
