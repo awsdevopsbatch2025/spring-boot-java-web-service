@@ -2,9 +2,9 @@ Docker Container With Spring Boot Web Service Example
 =====================================================
 The aim is to demonstrate a running docker container with a spring boot standalone
 web service thus, I've written the web service with Spring Boot as simple. For intensive
-a complete web service example with Spring Boot, you can check out my other repository
-which is [spring-boot-restful-web-service-example
-](https://github.com/bzdgn/spring-boot-restful-web-service-example).
+a complete web service example with Spring Boot you can check out my other repository
+which is [spring-boot-java-web-service
+](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service).
 
 TOC
 ---
@@ -20,13 +20,13 @@ TOC
 -------------------------
 The web service we are using in this example is kept as simple as possible for the simplicity
 of demonstrating how to run a docker container. It has a simple controller class which is quite
-straight-forward as it is obvious: [HelloController](https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/src/main/java/com/levo/dockerexample/controller/HelloController.java)
+straight-forward as it is obvious: [HelloController](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/src/main/java/com/levo/dockerexample/controller/HelloController.java)
 
 The key thing using a standalone Spring Boot application is to create a **Fat Jar**, also known as
 **Uber Jar**. In order to create the **Uber Jar**, there are two things to be done;
 
 1. Add an **start-class** to point to the class acting as the Entry Point as the example below.
-The reason we are doing so is, we need to reference the **.jar** file in the [Dockerfile](https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/Dockerfile);
+The reason we are doing so is, we need to reference the **.jar** file in the [Dockerfile](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/Dockerfile);
 
 ```
     <properties>
@@ -34,7 +34,7 @@ The reason we are doing so is, we need to reference the **.jar** file in the [Do
     </properties>
 ```
 
-In our example, you will see the properties as below in the [pom.xml](https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/pom.xml) file.
+In our example, you will see the properties as below in the [pom.xml](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/pom.xml) file.
 
 ```
     <properties>
@@ -46,7 +46,7 @@ In our example, you will see the properties as below in the [pom.xml](https://gi
 ```
 
 2. The second thing is, we need to know the name of our **Fat Jar** (a.k.a. **Uber Jar**). In order
-to do that, we use define the **final name** under **build** section of our [pom.xml](https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/pom.xml) file as below;
+to do that, we use define the **final name** under **build** section of our [pom.xml](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/pom.xml) file as below;
 
 ```
     <build>
@@ -71,7 +71,7 @@ In our example, the build section is as below;
 ```
 
 As we create our **Fat Jar** (a.k.a. **Uber Jar**) and we define the final name of our jar,
-we are all set and we can write the [Dockerfile](https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/Dockerfile).
+we are all set and we can write the [Dockerfile](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/Dockerfile).
 
 [Go back to TOC](#toc)
 
@@ -141,7 +141,7 @@ Then our **Dockerfile** will be as below;
 	CMD ["java", "-jar", "docker-java-app-example.jar"]
 ```
 
-Now our [Dockerfile](https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/Dockerfile) is all set, we can directly build the image.
+Now our [Dockerfile](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/Dockerfile) is all set, we can directly build the image.
 
 [Go back to TOC](#toc)
 
@@ -244,7 +244,7 @@ As you run the command, you can open up your browser, you can go to this url [ht
 Then you will see the container is returning the string message with date as below;
 
 <p align="center">
-	<img src="https://github.com/bzdgn/docker-spring-boot-java-web-service-example/blob/master/screenshots/00_docker_test.PNG" alt="docker-web-test">
+	<img src="https://github.com/awsdevopsbatch2025/spring-boot-java-web-service/blob/master/screenshots/00_docker_test.PNG" alt="docker-web-test">
 </p>
 
 [Go back to TOC](#toc)
