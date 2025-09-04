@@ -4,10 +4,14 @@ pipeline {
     stages {
         // Stage 1: Build the Java application using a Docker agent.
         stage('Build') {
-            steps {
-                docker.image('maven:3.8.6-openjdk-8').inside {
-                    sh 'mvn clean package'
+            
+            agent {
+                docker {
+                    image 'maven:3.8.6-openjdk-8'
                 }
+            }
+            steps {
+                sh 'mvn clean package'
             }
         }
 
