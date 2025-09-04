@@ -12,7 +12,6 @@ pipeline {
         }
 
         // Stage 2: Docker Build and Deploy
-        // This stage combines building the image and deploying it in one go.
         stage('Docker Build & Deploy') {
             steps {
                 script {
