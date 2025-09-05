@@ -3,7 +3,7 @@ Docker Container With Spring Boot Web Service Example
 The aim is to demonstrate a running docker container with a spring boot standalone
 web service thus, I've written the web service with Spring Boot as simple. For intensive
 a complete web service example with Spring Boot you can check out my other repository
-which is [spring-boot-java-web-service
+which is [spring-boot-java-web-service.
 ](https://github.com/awsdevopsbatch2025/spring-boot-java-web-service)
 
 TOC
