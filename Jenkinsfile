@@ -15,7 +15,7 @@ pipeline {
                     sh "docker build -t ${imageName}:${imageTag} ."
                     sh 'docker stop my-java-app || true'
                     sh 'docker rm my-java-app || true'
-                    sh "docker ru -d -p 8081:8080 --name my-java-app ${imageName}:${imageTag}"
+                    sh "docker run -d -p 8081:8080 --name my-java-app ${imageName}:${imageTag}"
                 }
             }
         }
